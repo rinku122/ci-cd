@@ -36,9 +36,9 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull ci_cd/web-app:latest
+            sudo docker pull rajeshkumar121995/ci_cd:latest
             sudo docker stop web-app || true
             sudo docker rm web-app || true
-            sudo docker run -d --name web-app -p 3005:3000 ci_cd/web-app:latest
+            sudo docker run -d --name web-app -p 3005:3000 rajeshkumar121995/ci_cd:latest
 
 
